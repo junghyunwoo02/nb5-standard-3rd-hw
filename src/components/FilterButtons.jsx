@@ -1,10 +1,14 @@
 // TODO: FilterButtons 컴포넌트를 작성하세요. 필터링 옵션을 선택하는 버튼들을 포함해야 합니다.
 function FilterButtons({ setFilteredStudents, initialStudents }) {
   const filterByAge = (minAge) => {
-    setFilteredStudents((prev) => prev.age >= minAge);
+    setFilteredStudents(
+      initialStudents.filter((student) => student.age >= minAge)
+    );
   };
   const filterByGrade = (grade) => {
-    setFilteredStudents((prev) => prev.grade === grade);
+    setFilteredStudents(
+      initialStudents.filter((student) => student.grade === grade)
+    );
   };
   const resetFilter = () => {
     setFilteredStudents(initialStudents);
