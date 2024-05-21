@@ -24,14 +24,12 @@ function App() {
 
   const handleInputChange = (e) => {
     const value = parseInt(e.target.value);
-    console.log("test1");
+
     if (!isNaN(value)) {
       // 숫자인 경우에만 최소 나이 업데이트
       setMinAge(value);
-      console.log("test2");
       return;
     }
-    console.log("test3");
   };
 
   return (
